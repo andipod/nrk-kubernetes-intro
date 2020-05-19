@@ -33,7 +33,7 @@ const config = {
 };
 
 export const fetchContactInformation = (dispatch) =>
-     fetch(`${API_URL}/api/me`, config)
+     fetch(`/api/me`, config)
         .then(response => {
             if (response.status < 200 && response.status > 300) {
                 throw new Error('oh noses');
@@ -45,7 +45,7 @@ export const fetchContactInformation = (dispatch) =>
 
 
 export function fetchWork(dispatch) {
-    fetch(`${API_URL}/api/work`, config)
+    fetch(`/api/work`, config)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`oh noses ${response.status}`);
@@ -57,7 +57,7 @@ export function fetchWork(dispatch) {
 }
 
 export const fetchEducation = (dispatch) =>
-    fetch(`${API_URL}/api/education`, config)
+    fetch(`/api/education`, config)
         .then(response => {
                 if (response.status >= 400) {
                     throw new Error();
