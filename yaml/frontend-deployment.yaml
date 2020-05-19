@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: andipod.azurecr.io/cvfrontend:1
+        image: andipod.azurecr.io/cvfrontend:5
         imagePullPolicy: Always
         ports:
         - containerPort: 8081
